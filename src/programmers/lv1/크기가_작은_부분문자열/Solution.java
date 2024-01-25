@@ -25,14 +25,14 @@ public class Solution {
 	}
 	
 	public static int solution(String t, String p) {
-		List<Long> splitList = new ArrayList<Long>();
-		int listSize = t.length() - p.length() + 1;
+		List<Long> splitList = new ArrayList<Long>(); // 범위초과로 int -> long으로 사용
+		int listSize = t.length() - p.length() + 1; // 부분문자열의 개수
 		
 		for(int i = 0; i < listSize; i++) 
-			splitList.add(Long.parseLong(t.substring(i, i + p.length())));
+			splitList.add(Long.parseLong(t.substring(i, i + p.length()))); // 부분문자열을 리스트로 저장
 
-		long smallerThan = Long.parseLong(p);
+		long smallerThan = Long.parseLong(p); // 숫자 비교를 위해 String -> long 변환 
 		
-		return (int)splitList.stream().filter(num -> num <= smallerThan).count();
+		return (int)splitList.stream().filter(num -> num <= smallerThan).count(); // 조건에 맞는 요소의 개수 계산
     }
 }
