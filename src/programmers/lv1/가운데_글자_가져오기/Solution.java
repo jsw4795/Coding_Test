@@ -20,8 +20,6 @@ public class Solution {
 		int startIndex = s.length() % 2 == 0 ? s.length() / 2 - 1 : s.length() / 2; 
 		int endIndex = s.length() / 2 + 1;
 		
-		String result = s.substring(startIndex, endIndex);
-		
-        return result;
+		return s.substring(startIndex, endIndex);
     }
 }
