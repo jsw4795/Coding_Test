@@ -37,7 +37,7 @@ public class Solution {
 				sum -= sequence[left++];
 			} else if (right < sequence.length) { // 합이 k보다 작으면 right 포인터 1 증가 (right가 수열 길이보다 작을 때만 증가)
 				sum += sequence[right++];
-			} else {
+			} else { // right가 끝까지 도달하고, 합이 k보다 작으면 종료
 				break;
 			}
 		}
